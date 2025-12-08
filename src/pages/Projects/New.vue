@@ -28,7 +28,7 @@
                 >Retirer cette section</v-btn>
               </div>
               <v-number-input
-                v-model="section.rows"
+                v-model="section.cols"
                 density="compact"
                 hint="Diminution incluse"
                 label="Nombre de rangées"
@@ -38,7 +38,7 @@
                 variant="outlined"
               />
               <v-number-input
-                v-model="section.repetitions"
+                v-model="section.rows"
                 class="mt-2"
                 density="compact"
                 hide-details="auto"
@@ -78,7 +78,7 @@
 
   const form = ref<InstanceType<typeof VForm>>()
   const newProject = ref<ProjectToCreate>({ name: '', sections: [{
-    repetitions: 0,
+    cols: 0,
     rows: 0,
   }] as ProjectSectionToCreate[] })
 
@@ -90,11 +90,11 @@
 
   function reset () {
     form.value?.reset()
-    newProject.value.sections = [{ repetitions: 0, rows: 0 }]
+    newProject.value.sections = [{ cols: 0, rows: 0 }]
   }
 
   function addSection () {
-    newProject.value.sections.push({ repetitions: 0, rows: 0 })
+    newProject.value.sections.push({ cols: 0, rows: 0 })
   }
   function removeSection (index: number) {
     newProject.value.sections = newProject.value.sections.filter((_, i) => i !== index)

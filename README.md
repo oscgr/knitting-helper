@@ -1,1 +1,1 @@
-# Nitting helper
+# Knitting helper

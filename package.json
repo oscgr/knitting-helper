@@ -1,10 +1,11 @@
 {
-  "name": "nitting-helper",
+  "name": "knitting-helper",
   "private": true,
   "type": "module",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "dev:host": "vite --host",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -14,15 +15,18 @@
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
     "@fontsource/roboto": "5.2.7",
-    "@mdi/font": "7.4.47",
     "@vueuse/core": "^14.1.0",
     "es-toolkit": "^1.42.0",
+    "luxon": "^3.7.2",
     "vue": "^3.5.25",
     "vue-router": "^4.6.3",
     "vuetify": "^3.11.2"
   },
   "devDependencies": {
+    "@mdi/font": "7.4.47",
+    "@mdi/js": "^7.4.47",
     "@tsconfig/node24": "^24.0.3",
+    "@types/luxon": "^3.7.1",
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.2",
     "@vue/tsconfig": "^0.8.1",

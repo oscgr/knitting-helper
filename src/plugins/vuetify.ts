@@ -6,12 +6,13 @@
 
 // Composables
 import { createVuetify } from 'vuetify'
-import { en, fr } from 'vuetify/locale'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
+import { en, fr } from 'vuetify/locale'
 import colors from 'vuetify/util/colors'
+
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
-
 import 'vuetify/styles'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
@@ -20,6 +21,13 @@ export default createVuetify({
     locale: 'fr',
     fallback: 'en',
     messages: { fr, en },
+  },
+  icons: {
+    defaultSet: 'mdi',
+    aliases,
+    sets: {
+      mdi,
+    },
   },
   theme: {
     defaultTheme: 'system',
